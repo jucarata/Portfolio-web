@@ -131,6 +131,7 @@ footer ul, header ul {
     padding: 20px;
     margin-left: 50px;
     max-width: 600px;
+    margin: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -157,4 +158,14 @@ footer ul, header ul {
 .project-status, .project-description {
     font-size: 1em;
     margin: 5px 0;
+}
+
+.raw-code {
+    display: flex;
+    justify-content: center;
+    max-width: 160px;
+    margin-top: 20px;
+    padding: 1%;
+    background-color: #bb1130;
+    border-radius: 15px;
 }
