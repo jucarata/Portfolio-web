@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+strong {
+    color: #210699;
+}
+
+h1, h2 {
+    font-family: "Archivo Black", sans-serif;
+    color: #210699;
+    font-size: 200%;
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 90px;
+}
+
+
+body {
+    font-family: "Schibsted Grotesk", sans-serif;
+    
+}
+
+main{
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(255, 249, 249);
+}
+
+a {
+    color: rgb(254 240 138);
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+
+
+header, footer {
+    background-color: #990621;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header span {
+    padding: 2.5%;
+}
+
+
+footer span {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul, header ul {
+    display: flex;
+    list-style: none;
+    gap: 4em;
+}
+
+
+.about-me {
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+}
+
+.professional-profile {
+    width: 100dvh;
+}
+
+.current-learn {
+    padding-top: 20px;
+}
+
+.code-icon {
+    font-size: 200%;
+}
+
+/* Estilos de mi experiencia */
+
+.job-icon i {
+    font-size: 200%;
+}
+
+.job-card {
+    display: flex;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+.job-desc {
+    padding-left: 5%;
+}
+
+.role, .job-corporation {
+    font-family: "Archivo Black", sans-serif;
+}
+
+.role {
+    color: #210699;
+}
+
+
+/* Projects */
+
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #990621;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-left: 50px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.project-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-title, .project-status, .project-description {
+    color: white;
+}
+
+.project-status, .project-description {
+    font-size: 1em;
+    margin: 5px 0;
+}
