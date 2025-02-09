@@ -1,0 +1,41 @@
+---
+import Navbar from '../components/Navbar.astro'
+---
+<div id="hero">
+    <Navbar/>
+    <div id="content">
+        <div>
+            <h1>Full Stack Developer</h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    #hero {
+        background-color: white;
+        width: auto;
+        height: 100dvh;
+    }
+
+    #content {
+        width: auto;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+    }
+
+    #desc {
+        max-width: 80dvh;
+        color: #210699;
+        font-size: x-large;
+    }
+
+    h1{
+        color: #D8304F;
+        font-size: 10rex;
+        margin: 0;
+    }
+
+</style>
