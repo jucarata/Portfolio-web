@@ -1,13 +1,17 @@
 ---
-import Navbar from '../components/Navbar.astro'
+import Button from "./Button.astro"
 ---
+
 <div id="hero">
-    <Navbar/>
-    <div id="content">
-        <div>
-            <h1>Full Stack Developer</h1>
-        </div>
+    <div id="about">
+        <h2>Hey, I'm Jucara</h2>
+        <h1>Full Stack Developer</h1>
     </div>
+
+    <span>
+        <Button>Let's connect</Button>
+        <Button>LinkedIn</Button>
+    </span>
 </div>
 
 <style>
@@ -15,27 +19,40 @@ import Navbar from '../components/Navbar.astro'
         background-color: white;
         width: auto;
         height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
     }
 
-    #content {
-        width: auto;
-        height: 100dvh;
+    #about {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 8rem;
+        flex-direction: column;
+        padding-top: 10rex;
     }
 
-    #desc {
-        max-width: 80dvh;
-        color: #210699;
-        font-size: x-large;
+    span {
+        display: flex;
+        height: 8%;
+        width: 30%;
+        gap: 4rem;
     }
 
     h1{
         color: #D8304F;
         font-size: 10rex;
         margin: 0;
+        font-weight: bold;
+    }
+
+    h2{
+       color: #210699; 
+       font-size: 6rex;
+       margin: 0;
+       font-weight: bold;
+       border: 0;
     }
 
 </style>
