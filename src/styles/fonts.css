@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'calsans';
+    src: url('../../public/fonts/CalSans-SemiBold.woff2') format('woff2'),
+      url('../../public/fonts/CalSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
