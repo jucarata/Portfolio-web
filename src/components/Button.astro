@@ -1,29 +1,42 @@
-<button>
-    <slot/>
-</button>
+---
+type ButtonProps = {
+  href?: string;
+}
+
+const { href } = Astro.props as ButtonProps;
+---
+
+<a href={href || '#'} class="button-link">
+  <slot />
+</a>
 
 <style>
-    button {
+    .button-link {
+        display: inline-block;
+        height: 50px;
+        width: 200px;
         background-color: #342D2D;
         border: none;
         color: white;
-        width: 50%;
-        height: 100%;
         border-radius: 12px;
         cursor: pointer;
         font-size: 16px;
         font-weight: 500;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        text-decoration: none; /* Prevenir subrayado del enlace */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    button:hover {
+    .button-link:hover {
         background-color: #585151;
         transform: translateY(-2px);
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     }
 
-    button:active {
+    .button-link:active {
         background-color: #2D2626;
         transform: translateY(0);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

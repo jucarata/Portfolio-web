@@ -3,7 +3,7 @@ type TimeLineProps = {
     isCurrent?: boolean;
 }
 
-const { isCurrent }: TimeLineProps = Astro.props;
+const { isCurrent } = Astro.props as TimeLineProps;
 
 let styles: string = isCurrent ? "background-color: white;" : "background-color: #d8304f;";
 ---
