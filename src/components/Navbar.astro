@@ -1,6 +1,5 @@
 <nav class="nav-menu">
     <span>
-        <!-- Aquí podrías dejar contenido adicional si lo requieres -->
     </span>
     <span class="menu">
         <ul>
@@ -10,7 +9,7 @@
             <li><a href="">Contact</a></li>
         </ul>
     </span>
-    <span class="hamburger" onclick="toggleMenu()">
+    <span class="hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -69,7 +68,8 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             display: none;
-            width: 90%;
+            width: 50%;
+            text-align: center;
         }
 
         .menu.active {
@@ -79,22 +79,24 @@
         .menu ul {
             flex-direction: column;
             gap: 1rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Muestra el ícono hamburguesa */
         .hamburger {
             display: flex;
-            /* Agrega un margen superior para separarlo del borde */
             margin-top: 10px;
         }
     }
 </style>
 
 <script>
-    function toggleMenu() {
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector('.hamburger');
         const menu = document.querySelector('.menu');
-        if (menu) {
-            menu.classList.toggle('active');
-        }
-    }
+        hamburger?.addEventListener("click", () => {
+            menu?.classList.toggle('active');
+        });
+    });
 </script>
