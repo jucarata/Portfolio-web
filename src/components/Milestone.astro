@@ -1,7 +1,61 @@
 ---
 import Timeline from "../components/Timeline.astro"
+const {position, startDate, endDate, institution, isCurrent = false} = Astro.props 
 ---
 
-<div>
-    <Timeline/>
+<div class="milestone">
+    <Timeline isCurrent={isCurrent}/>
+    <div class="position-info">
+        <h3 class={"position"}>{position}</h3>
+        <h3 class={"little-text"}>{institution}</h3>
+        <h3 class={"little-text"}>{startDate} - {endDate}</h3>
+    </div>
+    <p>
+        <slot/>
+    </p>
 </div>
+
+<style>
+    .milestone {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        padding-right: 30px;
+        height: auto;
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+    .position-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50dvw;
+        height: 100%;
+    }
+
+    h3 {
+        margin: 0;
+        padding-top: 5px;
+        font-weight: bold;
+    }
+
+    .little-text {
+        font-size: 15px;
+        color: #342D2D;
+    }
+
+    .position {
+        font-size: 25px;
+        color: #210699;
+    }
+
+    p {
+        font-size: larger;
+        font-weight: bold;
+        width: 1000px;
+        color: #342D2D;
+    }
+
+</style>

@@ -1,15 +1,59 @@
 ---
 import Milestone from "./Milestone.astro"
+import { getCollection } from "astro:content";
+
+type Experience = {
+  position: string;
+  institution: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}
+
+const info = await getCollection('data')
+const { experience } = info[0].data as { experience: Experience[] }
 ---
 
-<div>
-    <Milestone/>
+<div id="experience-section" class="experience-section">
+    <h2>Work Experience</h2>
+    <div class="milestone-section">
+        {experience.map(item => (
+            <Milestone 
+              position={item.position}
+              startDate={item.startDate}
+              endDate={item.endDate}
+              institution={item.institution}
+              isCurrent={true}
+            >
+              {item.description}
+            </Milestone>
+          ))}
+    </div>
 </div>
 
 <style>
-    div {
+    .experience-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: white;
         width: auto;
         height: 100dvh;
+        padding-bottom: 100px;
+    }
+
+    .milestone-section {
+        display: flex;
+        flex-direction: column;
+        width: 90dvw;
+    }
+
+    h2 {
+        color: #d8304f;
+        font-size: 7rex;
+        margin: 0;
+        font-weight: bolder;
+        padding-bottom: 50px;
     }
 </style>

@@ -1,42 +1,51 @@
 ---
+// Componente Astro
 type TimeLineProps = {
-    isCurrent?: boolean;
+  isCurrent?: boolean;
 }
-
 const { isCurrent } = Astro.props as TimeLineProps;
-
 let styles: string = isCurrent ? "background-color: white;" : "background-color: #d8304f;";
 ---
 
 <div class="timeline">
-    <div class="line"></div>
-    <div class="circle">
-        <div class="circle" style={`${styles} width: 70%; height: 70%;`}></div>
-    </div>
-    <div class="line" style="height: 60px;"></div>
+  <div class="line top"></div>
+  <div class="circle">
+    <div class="circle-inner" style={`${styles} width: 70%; height: 70%;`}></div>
+  </div>
+  <div class="line bottom"></div>
 </div>
 
 <style>
-    .timeline {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
 
-    .line {
-        height: 30px;
-        width: 6px;
-        background-color: #342D2D;
-    }
+  .line.top {
+    width: 6px;
+    background-color: #342D2D;
+    flex: 0 0 30%;
+  }
 
-    .circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #d8304f;
-    }
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d8304f;
+  }
+
+  .circle-inner {
+    border-radius: 50%;
+  }
+
+  .line.bottom {
+    width: 6px;
+    background-color: #342D2D;
+    flex: 1;
+  }
 </style>
