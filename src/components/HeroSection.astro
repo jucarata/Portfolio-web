@@ -3,59 +3,93 @@ import Button from "./Button.astro";
 import { getCollection } from "astro:content";
 
 const info = await getCollection('data')
-const {alias} = info[0].data
+const { alias } = info[0].data
 ---
 
 <div id="hero">
-    <div id="about">
-        <h2>Hey, I'm {alias}</h2>
-        <h1>Full Stack Developer</h1>
-    </div>
+  <div id="about">
+    <h2>Hey, I'm {alias}</h2>
+    <h1>Full Stack Developer</h1>
+  </div>
 
-    <span>
-        <Button href={"mailto:juancaram21@gmail.com"}>Let's connect</Button>
-        <Button href={"https://bit.ly/JCRamirezLinkedin"}>LinkedIn</Button>
-    </span>
+  <span>
+    <Button href={"mailto:juancaram21@gmail.com"}>Let's connect</Button>
+    <Button href={"https://bit.ly/JCRamirezLinkedin"}>LinkedIn</Button>
+  </span>
 </div>
 
 <style>
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  #hero {
+    background-color: white;
+    width: 100%;
+    max-width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  span {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  h1 {
+    color: #d8304f;
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  h2 {
+    color: #210699;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
     #hero {
-        background-color: white;
-        width: auto;
-        height: 100dvh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2rem;
+      padding-top: 6rem;
     }
-
-    #about {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 10rex;
-    }
-
+  
     span {
-        display: flex;
-        height: 8%;
-        width: 30%;
-        gap: 4rem;
+      flex-direction: row;
+      width: auto;
+      gap: 3rem;
     }
-
+  
     h1 {
-        color: #d8304f;
-        font-size: 10rex;
-        margin: 0;
-        font-weight: bolder;
+      font-size: 6rem;
     }
-
+  
     h2 {
-        color: #210699;
-        font-size: 6rex;
-        margin: 0;
-        font-weight: bold;
-        border: 0;
+      font-size: 2.5rem;
     }
+  }
 </style>
