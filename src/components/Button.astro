@@ -1,12 +1,14 @@
 ---
 type ButtonProps = {
   href?: string;
+  icon?: string
 }
 
-const { href } = Astro.props as ButtonProps;
+const { href, icon } = Astro.props as ButtonProps;
 ---
 
 <a href={href || '#'} class="button-link">
+  {icon && <img src={icon} alt="Ícono" class="icon" />}
   <slot />
 </a>
 
@@ -28,6 +30,7 @@ const { href } = Astro.props as ButtonProps;
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 0.5rem;
     }
 
     .button-link:hover {
