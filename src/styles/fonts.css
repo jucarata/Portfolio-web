@@ -1,7 +1,17 @@
 @font-face {
-    font-family: 'calsans';
-    src: url('../../public/fonts/CalSans-SemiBold.woff2') format('woff2'),
-      url('../../public/fonts/CalSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'poppins-regular';
+  src: url('../../public/fonts/Poppins-Regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins-bold';
+  src: url('../../public/fonts/Poppins-Bold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins-extra-bold';
+  src: url('../../public/fonts/Poppins-ExtraBold.woff2') format('woff2');
+  font-style: normal;
 }
