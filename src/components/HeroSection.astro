@@ -2,8 +2,8 @@
 import Button from "./Button.astro";
 import { getCollection } from "astro:content";
 
-const info = await getCollection('data')
-const { alias } = info[0].data
+const info = await getCollection("data");
+const { alias } = info[0].data;
 ---
 
 <div id="hero">
@@ -14,19 +14,44 @@ const { alias } = info[0].data
 
   <span>
     <Button href={"mailto:juancaram21@gmail.com"} icon={"icons/email.svg"}>
-      Contáctame</Button>
-    <Button href={"http://www.linkedin.com/in/jucarata"} icon={"icons/linkedin.svg"}>
-      LinkedIn</Button>
+      Contáctame</Button
+    >
+    <Button
+      href={"http://www.linkedin.com/in/jucarata"}
+      icon={"icons/linkedin.svg"}
+    >
+      LinkedIn</Button
+    >
   </span>
+
+  <div class="wave">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1000 112"
+      preserveAspectRatio="none"
+      transform="rotate(180)"
+    >
+      <g fill="#F48B61">
+        <path
+          d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z"
+        ></path>
+        <path
+          d="M0 0v99.7C62 69 122.4 48.7 205 66c83.8 17.6 160.5 20.4 240-12 54-22 110-26 173-10a392.2 392.2 0 0 0 222-5c55-17 110.3-36.9 160-27.2V0H0Z"
+        ></path>
+      </g>
+    </svg>
+  </div>
 </div>
 
 <style>
-
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
-  
+
   #hero {
+    position: relative;
     background-color: white;
     width: 100%;
     max-width: 100dvw;
@@ -58,7 +83,8 @@ const { alias } = info[0].data
     color: #d8304f;
     font-size: 4rem;
     margin: 0;
-    font-family: 'poppins-extra-bold';
+    font-family: "poppins-extra-bold";
+    line-height: 1;
     text-align: center;
   }
 
@@ -66,27 +92,49 @@ const { alias } = info[0].data
     color: #210699;
     font-size: 2rem;
     margin: 0;
-    font-family: 'poppins-extra-bold';
+    font-family: "poppins-extra-bold";
     text-align: center;
+  }
+
+  .wave {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+
+  .wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   @media (min-width: 768px) {
     #hero {
       padding-top: 6rem;
     }
-  
+
     span {
       flex-direction: row;
       width: auto;
       gap: 3rem;
     }
-  
+
     h1 {
       font-size: 5rem;
     }
-  
+
     h2 {
       font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wave {
+      height: 100px;
     }
   }
 </style>
