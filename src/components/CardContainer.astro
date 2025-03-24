@@ -1,0 +1,65 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+
+const data = {
+    backgroundUrl: "public/images/test.png",
+    title: "Proyecto de Prueba para probar el contenedor",
+    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, adipisci, omnis ab saepe nobis dolorum eaque facilis eligendi quaerat quod delectus repudiandae. Veritatis ea dolorum labore fugit reiciendis vitae sunt.",
+    link: "https://github.com/jucarata",
+    tags: ["React", "Spring boot", "Fakfka", "RabbitMQ", "Docker"]
+}
+
+---
+
+<div class="cards-container">
+    <ProjectCard 
+        backgroundUrl={data.backgroundUrl}
+        title={data.title}
+        content={data.content}
+        link={data.link}
+        tags={data.tags}
+    />
+    <ProjectCard 
+        backgroundUrl={data.backgroundUrl}
+        title={data.title}
+        content={data.content}
+        link={data.link}
+        tags={data.tags}
+    />
+    <ProjectCard 
+        backgroundUrl={data.backgroundUrl}
+        title={data.title}
+        content={data.content}
+        link={data.link}
+        tags={data.tags}
+    />
+    <ProjectCard 
+        backgroundUrl={data.backgroundUrl}
+        title={data.title}
+        content={data.content}
+        link={data.link}
+        tags={data.tags}
+    />
+    <ProjectCard 
+        backgroundUrl={data.backgroundUrl}
+        title={data.title}
+        content={data.content}
+        link={data.link}
+        tags={data.tags}
+    />
+</div>
+
+<style>
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .cards-container {
+            grid-template-columns: 1fr; /* Una card por fila en móviles */
+        }
+    }
+</style>

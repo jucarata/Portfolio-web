@@ -1,0 +1,43 @@
+---
+import CardContainer from "./CardContainer.astro";
+---
+
+<div class="projects-section">
+    <h2>Proyectos destacados</h2>
+    <CardContainer />
+</div>
+
+<style>
+    .projects-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 150px;
+        padding-bottom: 300px;
+        background-color: #d8304f;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        color: white;
+        font-size: 4rem;
+        margin: 0;
+        font-family: 'poppins-bold';
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 3rem;
+            padding-bottom: 30px;
+        }
+
+        .projects-section {
+            padding-top: 50px;            
+        }
+    }
+</style>
