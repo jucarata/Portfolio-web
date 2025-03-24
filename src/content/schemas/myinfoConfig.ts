@@ -5,13 +5,13 @@ const myinfo = defineCollection({
         name: z.string(),
         alias: z.string(),
         description: z.string(),
-        experience: z.array(
+        projects: z.array(
             z.object({
-                position: z.string(),
-                institution: z.string(),
-                startDate: z.string(),
-                endDate: z.string(),
-                description: z.string()
+                title: z.string(),
+                imageURL: z.string(),
+                description: z.string(),
+                stack: z.array(z.string()),
+                link: z.string().url()
             })
         )
     })

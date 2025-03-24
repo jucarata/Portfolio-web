@@ -2,17 +2,18 @@
 name: Juan Camilo Ramirez Tabares
 alias: Jucara
 description: Systems Engineer with experience in web development and artificial intelligence. Passionate about continuous learning and applying best practices to find optimal solutions. I enjoy combining AI and web development in innovative projects, exploring new technologies to improve my skills.
-experience: 
-    - position: Assistant for the Computer and Discrete Structures II course
-      institution: Universidad ICESI
-      startDate: February 2023
-      endDate: June 2023
-      description: Provided academic support to students in understanding and applying advanced algorithms, including graphs and cryptography. Guided students in resolving practical exercises and projects, fostering the development of logical and algorithmic thinking.
-    - position: Technical Support Assistant
-      institution: Universidad ICESI
-      startDate: January 2019
-      endDate: January 2020
-      description: Delivered technical support to the university’s computer systems, ensuring their proper functionality. Performed preventive maintenance, including internal cleaning and hardware optimization. Executed formatting and installation of operating systems and specialized software. Managed data backups to ensure information integrity and installed and configured new equipment for optimal performance.
+projects: 
+    - title: EverGrow - App para la oferta de Posgrados de la Universidad ICESI
+      imageURL: "public/images/EverGrow_ICESI.png"
+      description: Aplicación web para la oferta de los programas de Posgrados de la Universidad ICESI.  
+      stack: ["Spring Boot", "React + VITE", "PostgreSQL"]  
+      link: "https://github.com/jucarata"  
+
+    - title: Sistema de microservicios para Gimnasio
+      imageURL: "public/images/Kafka-Rabbit_image.jpeg"
+      description: Implementación de Kafka, RabbitMQ y Keycloak en un sistema de microservicios para la gestión de un gimnasio.  
+      stack: ["Spring Boot", "Kafka", "RabbitMQ", "Keycloak"]  
+      link: "https://github.com/jucarata/Kafka-RabbitMQ_Workshop"
 ---
 
 Este es el contenido de mi md
