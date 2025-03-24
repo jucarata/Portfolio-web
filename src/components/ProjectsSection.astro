@@ -1,10 +1,22 @@
 ---
 import CardContainer from "./CardContainer.astro";
+import { getCollection } from "astro:content";
+
+type Project = {
+    title: string;
+    imageURL: string,
+    description: string,
+    stack: string[],
+    link: string
+}
+
+const info = await getCollection('data')
+const { projects } = info[0].data as { projects: Project[] }
 ---
 
 <div class="projects-section">
     <h2>Proyectos destacados</h2>
-    <CardContainer />
+    <CardContainer projects={projects}/>
 </div>
 
 <style>

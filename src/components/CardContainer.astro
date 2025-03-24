@@ -1,53 +1,31 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 
-
-const data = {
-    backgroundUrl: "public/images/test.png",
-    title: "Proyecto de Prueba para probar el contenedor",
-    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, adipisci, omnis ab saepe nobis dolorum eaque facilis eligendi quaerat quod delectus repudiandae. Veritatis ea dolorum labore fugit reiciendis vitae sunt.",
-    link: "https://github.com/jucarata",
-    tags: ["React", "Spring boot", "Fakfka", "RabbitMQ", "Docker"]
+type Project = {
+    title: string;
+    imageURL: string,
+    description: string,
+    stack: string[],
+    link: string
 }
 
+interface Props {
+    projects: Project[];
+}
+
+const { projects } = Astro.props
 ---
 
 <div class="cards-container">
-    <ProjectCard 
-        backgroundUrl={data.backgroundUrl}
-        title={data.title}
-        content={data.content}
-        link={data.link}
-        tags={data.tags}
-    />
-    <ProjectCard 
-        backgroundUrl={data.backgroundUrl}
-        title={data.title}
-        content={data.content}
-        link={data.link}
-        tags={data.tags}
-    />
-    <ProjectCard 
-        backgroundUrl={data.backgroundUrl}
-        title={data.title}
-        content={data.content}
-        link={data.link}
-        tags={data.tags}
-    />
-    <ProjectCard 
-        backgroundUrl={data.backgroundUrl}
-        title={data.title}
-        content={data.content}
-        link={data.link}
-        tags={data.tags}
-    />
-    <ProjectCard 
-        backgroundUrl={data.backgroundUrl}
-        title={data.title}
-        content={data.content}
-        link={data.link}
-        tags={data.tags}
-    />
+    {projects.map((project) => (
+        <ProjectCard 
+            backgroundUrl={project.imageURL}
+            title={project.title}
+            content={project.description}
+            link={project.link}
+            tags={project.stack}
+        />
+    ))}
 </div>
 
 <style>

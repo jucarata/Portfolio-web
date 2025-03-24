@@ -35,8 +35,7 @@ const { backgroundUrl, title, content, link, tags } = Astro.props;
   .card {
     background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
     color: black;
     width: 400px;
     height: 350px;
@@ -72,11 +71,14 @@ const { backgroundUrl, title, content, link, tags } = Astro.props;
 
   .tags {
     width: 100%;
-    padding-top: 20px;
+    height: 40px;
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
+    margin-top: auto;
+    margin-bottom: 15px;
+    align-items: center;
   }
 
   p,
