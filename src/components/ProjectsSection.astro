@@ -14,7 +14,7 @@ const info = await getCollection('data')
 const { projects } = info[0].data as { projects: Project[] }
 ---
 
-<div class="projects-section">
+<div id="projects-section" class="projects-section">
     <h2>Proyectos destacados</h2>
     <CardContainer projects={projects}/>
 </div>
